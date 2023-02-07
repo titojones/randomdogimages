@@ -1,38 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Chicle&display=swap");
+
+* {
+  font-family: "Chicle", cursive;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f8f7f2;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  flex-direction: column;
 
-.App-link {
-  color: #61dafb;
+  /* background-color: #a62b2b; */
+  height: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.2em;
+  font-size: clamp(1.6875rem, 0.1818rem + 4.8182vw, 5rem);
+}
+.paw {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+}
+.home > img {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  /* background-color: blue; */
 }

@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 5em 0 5em;
+}
+.logo {
+  color: #bdb281;
+  font-size: clamp(1.1875rem, 0.733rem + 1.4545vw, 2.1875rem);
+  text-decoration: none;
+}
+.container > nav > ul > li > a {
+  font-size: clamp(1.1875rem, 0.733rem + 1.4545vw, 2.1875rem);
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+.wrapper > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+ul > li {
+  list-style: none;
+}

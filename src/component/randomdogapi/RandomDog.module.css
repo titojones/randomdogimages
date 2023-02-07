@@ -1,0 +1,58 @@
+.doggo {
+  height: auto;
+  width: 100%;
+  max-width: 550px;
+}
+.randogcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5em;
+  /* background-color: green; */
+}
+.randogcontainer img {
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 80%;
+}
+.button {
+  border: none;
+  background-image: linear-gradient(rgb(189, 178, 129), rgb(235, 225, 183));
+  border-radius: 12px;
+  font-size: 1.8rem;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.dogcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 2em;
+}
+.btncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.btncontainer img {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 50px;
+}
+.heart {
+  background-color: none !important;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
