@@ -71,15 +71,8 @@ export const GetRandomdog = () => {
           </div>
         )}
       </div>
-      {getFavDoggo.map((doggo, i) => {
-        return (
-          <FavoriteAdd
-            key={doggo.key}
-            id={doggo.id}
-            keys={i.key}
-            url={doggo.url}
-          />
-        );
+      {getFavDoggo.map((doggo) => {
+        return <FavoriteAdd key={doggo.id} id={doggo.id} url={doggo.url} />;
       })}
     </div>
   );
