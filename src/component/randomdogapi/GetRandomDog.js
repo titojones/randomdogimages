@@ -1,11 +1,23 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import classes from "./RandomDog.module.css";
+import { FavoriteAdd } from "./generatedDoggo";
 
 export const GetRandomdog = () => {
   const [getDog, setDog] = useState(null);
   const [isDogFetch, setDogFetch] = useState(false);
+  const [getFavDoggo, setFavDoggo] = useState([]);
 
+  const SaveFavDoggo = () => {
+    const favDoggo = {
+      id:
+        getFavDoggo.length === 0
+          ? 1
+          : getFavDoggo[getFavDoggo.length - 1].id + 1,
+      url: getDog.message,
+    };
+    setFavDoggo([...getFavDoggo, favDoggo]);
+  };
   const getDogData = () => {
     setDogFetch(true);
   };
@@ -41,6 +53,9 @@ export const GetRandomdog = () => {
           <div className={classes.dogcard}>
             <img src={getDog.message} alt="wala" />
             <div className={classes.btncontainer}>
+              <button onClick={SaveFavDoggo} className={classes.heart}>
+                <img src="heart.png" alt="wala" />
+              </button>
               <button onClick={getDogData} className={classes.button}>
                 Generate Again
               </button>
@@ -56,6 +71,16 @@ export const GetRandomdog = () => {
           </div>
         )}
       </div>
+      {getFavDoggo.map((doggo, i) => {
+        return (
+          <FavoriteAdd
+            key={doggo.key}
+            id={doggo.id}
+            keys={i.key}
+            url={doggo.url}
+          />
+        );
+      })}
     </div>
   );
 };

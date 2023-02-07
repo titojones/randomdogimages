@@ -1,7 +1,7 @@
 export const FavoriteAdd = (props) => {
   return (
-    <div id={props.key}>
-      <img src={props.img} alt="wala" />
+    <div id={props.key} key={props.id}>
+      <img src={props.url} alt="wala" />
     </div>
   );
 };
